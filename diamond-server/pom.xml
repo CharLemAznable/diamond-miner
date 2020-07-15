@@ -33,7 +33,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.24</version>
+            <version>8.0.16</version>
         </dependency>
         <dependency>
             <groupId>com.oracle</groupId>
@@ -83,7 +83,7 @@
         <dependency>
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
-            <version>1.3</version>
+            <version>1.3.3</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
