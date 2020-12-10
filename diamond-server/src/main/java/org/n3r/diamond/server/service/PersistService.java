@@ -9,7 +9,7 @@ import org.n3r.diamond.server.utils.Props;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementSetter;
-import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -32,7 +32,7 @@ public class PersistService {
     private String driverClassName;
     private String tableName;
 
-    private static final class DiamondStoneRowMapper implements ParameterizedRowMapper<DiamondStone> {
+    private static final class DiamondStoneRowMapper implements RowMapper<DiamondStone> {
         public DiamondStone mapRow(ResultSet rs, int rowNum) throws SQLException {
             DiamondStone info = new DiamondStone();
             info.setDataId(rs.getString("data_id"));

@@ -9,7 +9,8 @@
     <packaging>war</packaging>
 
     <properties>
-        <spring.version>4.0.6.RELEASE</spring.version>
+        <java.version>1.8</java.version>
+        <spring.version>5.3.1</spring.version>
         <guava.version>17.0</guava.version>
         <slf4j.version>1.7.5</slf4j.version>
         <fastjson.version>1.2.51</fastjson.version>
@@ -88,7 +89,7 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <version>3.0.1</version>
+            <version>4.0.1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -139,6 +140,15 @@
                 <version>2.4.3</version>
                 <configuration>
                     <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
 

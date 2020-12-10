@@ -4,7 +4,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
-import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
+import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -18,7 +18,7 @@ public class PageHelper {
                              Object args[],
                              int pageNo,
                              int pageSize,
-                             final ParameterizedRowMapper<E> rowMapper) {
+                             final RowMapper<E> rowMapper) {
         if (pageSize == 0) return null;
 
         int rowCount = jt.queryForObject(sqlCountRows, args, Integer.class);
